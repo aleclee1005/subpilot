@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubPilot — YouTube Subtitles to AI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; background: #fff; }
+
+    header {
+      background: #CC0000;
+      color: #fff;
+      padding: 60px 24px 56px;
+      text-align: center;
+    }
+    .logo-circle {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: Georgia, serif; font-size: 44px; font-weight: bold;
+      color: #CC0000; margin-bottom: 20px;
+    }
+    header h1 { font-size: 48px; font-weight: 700; letter-spacing: -1px; }
+    header p { font-size: 20px; margin-top: 10px; color: rgba(255,255,255,0.85); }
+    .cws-btn {
+      display: inline-block; margin-top: 28px;
+      background: #fff; color: #CC0000;
+      padding: 13px 28px; border-radius: 28px;
+      font-weight: 600; font-size: 15px; text-decoration: none;
+      transition: opacity .2s;
+    }
+    .cws-btn:hover { opacity: .85; }
+
+    section { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+
+    h2 { font-size: 26px; font-weight: 700; margin-bottom: 28px; color: #111; }
+
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card {
+      border: 1px solid #e8e8e8; border-radius: 12px; padding: 24px;
+    }
+    .card-icon { font-size: 28px; margin-bottom: 12px; }
+    .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .card p { font-size: 14px; color: #555; line-height: 1.6; }
+
+    .ai-grid {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;
+    }
+    .ai-chip {
+      border: 1.5px solid #CC0000; color: #CC0000;
+      padding: 6px 18px; border-radius: 20px;
+      font-size: 14px; font-weight: 500;
+    }
+
+    .steps { counter-reset: step; display: flex; flex-direction: column; gap: 18px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .step-num {
+      min-width: 32px; height: 32px; border-radius: 50%;
+      background: #CC0000; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px;
+    }
+    .step p { font-size: 15px; color: #333; padding-top: 6px; line-height: 1.5; }
+
+    footer {
+      border-top: 1px solid #eee;
+      text-align: center; padding: 32px 24px;
+      font-size: 13px; color: #888;
+    }
+    footer a { color: #CC0000; text-decoration: none; }
+
+    .divider { border: none; border-top: 1px solid #f0f0f0; margin: 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-circle">S</div>
+  <h1>SubPilot</h1>
+  <p>YouTube Subtitles → AI in One Click</p>
+  <a class="cws-btn" href="https://chromewebstore.google.com/detail/subpilot" target="_blank">
+    Add to Chrome — It's Free
+  </a>
+</header>
+
+<section>
+  <h2>Features</h2>
+  <div class="features">
+    <div class="card">
+      <div class="card-icon">📝</div>
+      <h3>Auto-load Subtitles</h3>
+      <p>Fetch and display the full transcript in a side panel — no need to enable CC manually.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3>Real-time Highlight</h3>
+      <p>The currently playing line is highlighted as the video plays. Click any line to jump to that moment.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">✨</div>
+      <h3>Custom AI Instructions</h3>
+      <p>Add a prompt like "Summarize in 500 words" or "Create a 10-slide outline" before sending.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🚀</div>
+      <h3>Auto-submit</h3>
+      <p>Optional toggle to automatically click the send button after text is inserted into the AI chat.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <h2>Supported AI Services</h2>
+  <div class="ai-grid">
+    <span class="ai-chip">ChatGPT</span>
+    <span class="ai-chip">Claude</span>
+    <span class="ai-chip">Gemini</span>
+    <span class="ai-chip">DeepSeek</span>
+    <span class="ai-chip">Dola</span>
+    <span class="ai-chip">Qwen</span>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section>
+  <h2>How to Use</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><p>Open any YouTube video with subtitles.</p></div>
+    <div class="step"><div class="step-num">2</div><p>Click <strong>Subtitles</strong> in the side panel — the transcript loads automatically.</p></div>
+    <div class="step"><div class="step-num">3</div><p>Click <strong>Send to AI</strong>, type optional instructions, and select your AI services.</p></div>
+    <div class="step"><div class="step-num">4</div><p>Click <strong>Send</strong> — selected AI tabs open with subtitles pre-filled and ready to go.</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <a href="https://github.com/aleclee1005/yt2gemini/issues" target="_blank">Support / Report an Issue</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/aleclee1005/yt2gemini" target="_blank">GitHub</a>
+    &nbsp;·&nbsp;
+    Made by <a href="https://github.com/aleclee1005" target="_blank">aleclee1005</a>
+  </p>
+</footer>
+
+</body>
+</html>
